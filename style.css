@@ -58,13 +58,17 @@ html{
     font-size: 3.6rem;
     color:  rgb(255, 166, 0);
     display: none;
+    cursor: pointer;
 }
 .mainp{
     background: url(tr.png);
     background-position: center;
     background-size: cover;
-    padding: 200px;
-    height: 100vh;
+    padding: 200px 9% 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .main{
     text-align: center;
@@ -114,6 +118,10 @@ html{
 
 .item-chart img{
     margin-top: 25px;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 .item-chart h3{
     font-size: 16px;
@@ -268,4 +276,121 @@ html{
 ::-webkit-scrollbar-track{
     background-color: rgba(0,0,0,0.5);
     width: 50px;
+}
+
+
+/* Tablets and small laptops */
+@media (max-width: 991px){
+    html{
+        font-size: 62%;
+    }
+    .header{
+        padding: 2rem 5%;
+    }
+    .mainp{
+        padding: 160px 5% 80px;
+    }
+}
+
+/* Tablets / large phones - mobile nav kicks in here */
+@media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+    .navbar.active{
+        display: flex;
+    }
+    .navbar a{
+        display: block;
+        margin: 1.5rem 0;
+        font-size: 2.2rem;
+    }
+    .main h2{
+        font-size: 3.6rem;
+    }
+    .main p{
+        font-size: 1.8rem;
+        line-height: 1.6;
+    }
+    .info p br{
+        display: none;
+    }
+    .cart{
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+        left: auto;
+    }
+    .category{
+        margin-top: 20px;
+        padding: 8px 14px;
+        font-size: 1.4rem;
+    }
+    .view{
+        padding: 30px 20px;
+    }
+    .items-page{
+        gap: 25px;
+        padding: 10px;
+    }
+    .item-chart{
+        width: 45%;
+        min-width: 160px;
+    }
+    .checkout, .contact{
+        padding: 30px 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+    .form-box, .form-boxs{
+        max-width: 90%;
+    }
+}
+
+/* Phones */
+@media (max-width: 450px){
+    .header{
+        padding: 1.5rem 4%;
+    }
+    .logo{
+        font-size: 2.4rem;
+    }
+    .mainp{
+        padding: 140px 5% 60px;
+    }
+    .main h2{
+        font-size: 2.8rem;
+    }
+    .main p{
+        font-size: 1.6rem;
+    }
+    .item-chart{
+        width: 100%;
+        max-width: 260px;
+    }
+    .input-form input,
+    .input-form textarea{
+        width: 100%;
+    }
+    .form-box, .form-boxs{
+        max-width: 100%;
+        margin-top: 25px;
+        padding: 15px;
+    }
+    .cart{
+        font-size: 1.2rem;
+        padding: 8px 14px;
+    }
 }
