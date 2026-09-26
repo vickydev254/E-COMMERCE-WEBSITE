@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thrift store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+      <header class="header">
+        <a href="#home" class="logo">Thrift by
+            <span>Anne</span></a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+        
+          <section class="mainp">
+            <div class="info">
+                <h2>Welcome.</h2>
+                 <p>At Thrift by Anne, we believe fashion should be affordable,<br>
+                  sylish, and sustainable.Our misssion is to give clothes a <br>
+                  second life while helping you express your unique style without <br>
+                  breaking the bank.
+                </p>
+                
+            </div>
+            <div class="container">
+              
+            </div>
+          </section>
+
+          <section class="shop-page">
+
+            <div class="view" id="views">
+              
+                <h3>SHOP</h3>
+
+              <div class="cart">
+               🛒 Cart: <span id="cart-count">0</span>
+              </div>
+              <button class="category" onclick="filterItems('all')">All</button>
+              <button class="category" onclick="filterItems('dresses')">Dresses</button>
+              <button  class="category" onclick="filterItems('trousers')">Trousers</button>
+              <button  class="category" onclick="filterItems('skirts')">Skirt</button>
+              <button  class="category" onclick="filterItems('tops')">Tops</button>
+              <button  class="category" onclick="filterItems('bags')">Bags</button>
+              <button  class="category" onclick="filterItems('jackets')">Jackets</button>
+           
+              <div class="items-page">
+              <div class="item-chart" data-category="tops">
+              <img src="Web.jpg" alt="photo" width="200px" height="200px" >
+              <h3>Trendy crochet top</h3>
+              <p class="desc">A soft pink crochet top</p>
+              <p class="price">KSH.1000</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="tops">
+              <img src="crop.jpg" alt="photo" width="200px" height="200px" >
+              <h3>Crop Top</h3>
+              <p class="desc">Drawstring front letttuce trim</p>
+              <p class="price">KSH.400</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="skirts">
+              <img src="denim.jpg" alt="photo" width="200px" height="200px">
+              <h3>Denim Skirt</h3>
+              <p class="desc">Big Bow wrap front mini bodycon skirt</p>
+              <p class="price">KSH.500</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="dresses">
+              <img src="dress.jpg" alt="photo" width="200px" height="200px">
+              <h3>Dress</h3>
+              <p class="desc">Off-shoulder long-sleeved ruffle dress</p>
+              <p class="price">KSH.1300</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              
+              <div class="item-chart" data-category="tops">
+              <img src="shirt.jpg" alt="photo" width="200px" height="200px" >
+              <h3>T-shirt</h3>
+              <p class="desc">Round Neck Short Sleeve T-shirt</p>
+              <p class="price">KSH.300</p>
+              <button class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="jackets">
+              <img src="puff.jpg" alt="photo" width="200px" height="200px" >
+              <h3>Jacket</h3>
+              <p class="desc">Cropped Puffer Jacket</p>
+              <p class="price">KSH.899</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="bags">
+              <img src="bag.jpg" alt="photo" width="200px" height="200px">
+              <h3>Bag</h3>
+              <p class="desc">Square chain bag</p>
+              <p class="price">KSH.1299</p>
+              <button  class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+
+              <div class="item-chart" data-category="trousers">
+              <img src="trouser.jpg" alt="photo" width="200px" height="200px">
+              <h3>Baggy pants</h3>
+              <p class="desc">Fashionable Straight-leg pants</p>
+              <p class="price">KSH.999</p>
+              <button class="buy-btn">Buy</button>
+              <button class="add-to-cart">Add to Cart</button>
+              </div>
+            
+            </div>
+
+            </div>
+
+            </section>
+
+            <section>
+            <div class="checkout" id="place-order">
+            
+           <form action="#" class="form-box">
+            <h3>Place Order</h3>
+            <div class="input-form">
+              <input type="text" id="name" placeholder="Name">
+           </div>
+
+           <div class="input-form"> 
+            <input type="email" id="email" placeholder="Email">
+           </div>
+
+           <div class="input-form">
+             <input type="text" id="phonenum" placeholder="Phone No.">
+           </div>
+           
+            <div class="input-form">
+              <input type="text" id="address" placeholder="Address(nearest town/city)">
+            </div>
+
+            <div class="options">
+              <label for="payment">Select payment method: </label><br>
+              
+              <label for="mpesa"><input type="radio" name="payment" value="mpesa" required> M-pesa</label>
+              
+              <label for="mpesa"><input type="radio" name="payment" value="paypal" required>Paypal</label>
+              
+            </div>
+
+            <button class="submit" type="submit">PLACE ORDER</button>
+
+          </form>
+          </div>
+
+          </section>
+
+          <section class="contact">
+            <div class="info">
+          
+            <h3>CONTACT US</h3>
+            </div>
+          
+             <form action="#" class="form-boxs">
+            <div class="input-form">
+              <input type="text" id="name" placeholder="Name">
+           </div>
+
+           <div class="input-form"> 
+            <input type="email" id="email" placeholder="Email">
+           </div>
+
+           <div class="input-form">
+             <input type="text" id="phonenum" placeholder="Phone No.">
+           </div>
+           
+            <div class="input-form">
+              <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message">
+        </textarea>
+        
+            </div>
+
+            <button class="submits" type="submit">SEND MESSAGE</button>
+
+            
+            </form>
+          </section>
+        
+
+         <script src="script.js"></script>
+</body>
+</html>
